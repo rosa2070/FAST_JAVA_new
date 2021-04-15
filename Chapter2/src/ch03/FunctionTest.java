@@ -28,6 +28,17 @@ public class FunctionTest {
 
 	public static void main(String[] args) {
 		
+		int n1 = 10;
+		int n2 = 20;
+		
+		int total = addNum(n1, n2);
+		System.out.println(total);
+		
+		sayHello("æ»≥Á«œººø‰");
+		
+		total = calcSum();
+		System.out.println(total);
+		
 
 	}
 
