@@ -14,6 +14,14 @@ public class Employee {
 		employeeId = serialNum;
 	}
 	
+	public static int getSerialNum() {
+		int i = 0;
+		
+
+		
+		return serialNum;
+	}
+	
 	
 	public int getEmployeeId() {
 		return employeeId;
