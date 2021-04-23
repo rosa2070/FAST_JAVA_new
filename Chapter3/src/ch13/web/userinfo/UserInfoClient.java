@@ -7,6 +7,8 @@ import java.util.Properties;
 
 import ch13.domain.userinfo.UserInfo;
 import ch13.domain.userinfo.dao.UserInfoDao;
+import ch13.domain.userinfo.dao.mysql.UserInfoMySqlDao;
+import ch13.domain.userinfo.dao.oracle.UserInfoOracleDao;
 
 public class UserInfoClient {
 
@@ -23,7 +25,17 @@ public class UserInfoClient {
 		
 		UserInfoDao userInfoDao = null;
 		
-		if( dbType.)
+		if( dbType.equals("ORACLE")) {
+			userInfoDao = new UserInfoOracleDao();
+		}
+		else if(dbType.equals("MYSQL")) {
+			userInfoDao = new UserInfoMySqlDao();
+		}
+		else {
+			
+			System.out.println("db error");
+			return;
+		}
 
 	}
 
