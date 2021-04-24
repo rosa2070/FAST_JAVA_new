@@ -22,6 +22,9 @@ public class UserInfoClient {
 		String dbType = prop.getProperty("DBTYPE");
 		
 		UserInfo userInfo = new UserInfo();
+		userInfo.setUserId("12345");
+		userInfo.setPassword("!@#$%");
+		userInfo.setUserName("Lee");
 		
 		UserInfoDao userInfoDao = null;
 		
@@ -36,6 +39,10 @@ public class UserInfoClient {
 			System.out.println("db error");
 			return;
 		}
+		
+		userInfoDao.insertUserInfo(userInfo);
+		userInfoDao.updateUserInfo(userInfo);
+		userInfoDao.deleteUserInfo(userInfo);
 
 	}
 
