@@ -9,6 +9,13 @@ class Book{
 		this.title = title;
 		this.author = author;
 	}
+
+	@Override
+	public String toString() {
+		return title + "," + author;
+	}
+	
+	
 	
 }
 
